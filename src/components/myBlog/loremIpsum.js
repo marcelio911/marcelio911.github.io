@@ -1,0 +1,18 @@
+const loremIpsum = `<div id="lipsum">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu imperdiet orci. Cras consectetur libero sem. Pellentesque ultrices tortor et fermentum euismod. Quisque eget elementum velit. Nunc et vulputate risus. In hac habitasse platea dictumst. Sed ut ante porta, imperdiet ligula ac, consequat tellus. Pellentesque at viverra est. Nam laoreet tortor sed turpis dapibus, ut efficitur mauris finibus. Vivamus tempor diam eu eros ullamcorper, et consequat arcu mattis. Quisque vulputate ex dui, at pellentesque orci tincidunt sit amet.
+</p>
+<p>
+Cras imperdiet erat ipsum. Sed ac scelerisque nibh, et vestibulum turpis. Morbi elit mauris, tincidunt quis nulla vel, facilisis laoreet tellus. Cras id enim ultricies, molestie sem nec, posuere urna. Pellentesque at nibh blandit, ullamcorper ligula nec, tempus nisi. Aenean dignissim commodo orci. Nam feugiat mauris odio, non efficitur nisl consectetur id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis mattis mi. Pellentesque ut accumsan velit.
+</p>
+<p>
+Nunc et ornare elit. Cras volutpat lacinia sem. Praesent purus dui, tempor et massa a, porta volutpat augue. Sed tincidunt quis justo ac luctus. Vestibulum non pharetra justo. Fusce nisi libero, convallis lacinia diam eu, efficitur pharetra enim. Curabitur viverra ullamcorper risus sed pulvinar. Pellentesque sit amet lorem nec dolor viverra dictum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed in risus tempor, fringilla nulla id, porttitor purus. Praesent malesuada tincidunt justo id vehicula. Ut gravida blandit vehicula. Fusce at ullamcorper tellus, vitae pretium nunc.
+</p>
+<p>
+Maecenas sit amet nisi id elit varius pulvinar quis placerat metus. Fusce dictum, justo in tincidunt laoreet, ex eros imperdiet velit, eu mollis lorem eros id orci. Proin augue libero, semper ut odio non, sodales mattis lectus. Ut commodo non velit eu mollis. Curabitur est purus, rhoncus quis tellus non, tempor tempus mi. Aliquam erat volutpat. Quisque quam ex, egestas nec elit a, dignissim pretium eros. Donec sit amet enim dolor. Proin sed pellentesque mauris. Proin justo enim, maximus in lacus eu, maximus maximus metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis semper nulla vitae interdum finibus. Pellentesque porta maximus ante eleifend sagittis. Morbi rutrum felis ut ligula dictum, placerat vulputate ante laoreet.
+</p>
+<p>
+Duis porttitor blandit ipsum quis dignissim. Nulla interdum ipsum ut placerat ullamcorper. Praesent aliquet, arcu ut consequat iaculis, nulla odio pulvinar sem, sed porttitor mauris tellus nec ex. Maecenas euismod imperdiet lectus, sed ultricies metus porta nec. Integer semper ex vitae velit luctus, et pulvinar orci faucibus. Donec vel turpis sit amet quam lacinia blandit. Aenean a massa eget magna ultrices lobortis ut at turpis. Nulla a urna aliquam, auctor ligula eget, cursus lacus. Morbi consequat sagittis sagittis. Nunc sed ante mollis, tristique ante feugiat, volutpat risus. Fusce quis euismod erat. Etiam facilisis, velit at finibus ullamcorper, turpis magna ultrices lacus, eu tristique arcu dolor a purus. Vestibulum a dui vitae diam cursus commodo sit amet a justo. In vel erat viverra, congue tellus non, dapibus felis. Morbi malesuada, magna at dignissim mattis, mi tortor malesuada leo, id feugiat turpis nibh in lectus.
+</p></div>`;
+
+export default loremIpsum;

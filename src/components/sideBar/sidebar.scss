@@ -1,0 +1,40 @@
+.sidebar {
+    display: flex;
+    align-content: space-between;
+    padding: 1vmin;
+
+}
+.animated-list {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+p {
+    word-break: break-all;
+}
+.Sidebar-profile {
+    height: 15vmin;
+    pointer-events: none;
+    border-radius: 70vmin;
+    margin: 2vmin 0vmin 0vmin 0vmin;
+    border: 1px solid rgb(52 73 94);
+}
+.fade-enter {
+    opacity: 0;
+    height: 0%;
+}
+.fade-enter-active {
+    transition: all 1s;
+    height: 100%;
+    opacity: 1;
+}
+
+.fade-leave {
+    opacity: 1;
+}
+.fade-leave-active {
+    transition: all 1s;
+    opacity: 0;
+}
+.email{
+    font-size: 2vmin;
+}

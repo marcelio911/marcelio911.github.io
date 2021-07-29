@@ -1,0 +1,25 @@
+.header {
+}
+
+.menu {
+    margin: 16px;
+    background: transparent !important;
+    border: none !important;
+}
+.menu-nav {
+    height: 30px;
+    margin-bottom: 16px;
+    line-height: 30px;
+    color: #f8f8f8;
+}
+.menu-nav a {
+    padding: 0 8px;
+    line-height: 30px;
+    color: #fafafa;
+}
+.app-list {
+    margin-top: 16px;
+}
+[data-theme='dark'] .menu-nav {
+    background: #141414;
+}

@@ -1,0 +1,17 @@
+.technologies{
+    margin: 10px;
+    position: fixed;  
+    bottom: 2vmin;
+}
+.technologies ul {
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+.technologies ul li { 
+    display: inline;  
+    margin: 1vmin; 
+}
+
+.technologies ul li img { height: 7vmin;}
