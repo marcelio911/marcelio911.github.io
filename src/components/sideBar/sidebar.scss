@@ -1,12 +1,14 @@
 .sidebar {
     display: flex;
-    align-content: space-between;
-    padding: 1vmin;
+    flex-direction: column;
+    margin-right: auto;
     background-color: hsla(0,0%,100%,.75) !important;
-    flex: 0 0 235px !important;
-    max-width: 230px !important;
-    min-width: 230px !important;
-
+    flex: none !important;
+    max-width: 360px !important;
+    min-width: 360px !important;
+    flex-direction: column;
+    position: sticky !important;
+    animation: 1s ease 0s 1 normal none running hcmFve;
 }
 .animated-list {
     list-style: none;
@@ -17,7 +19,10 @@
 }
 
 .sidebar .description {
-    font-size: 1.7vmin;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 .Sidebar-profile {
     height: 17vmin;

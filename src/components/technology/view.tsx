@@ -11,8 +11,11 @@ import aws from '../../assets/images/technologies/aws.png';
 import firebase from '../../assets/images/technologies/firebase.png';
 import { Technologies, TechnologiesTitle } from './styles';
 
+interface Props {
+    title: string;
+}
 
-const TechnologiesView: React.FC = () => {
+const TechnologiesView: React.FC<Props> = (props) => {
     const myTechnologies = [
         { 'Nodejs': nodejs },
         { 'Reactjs': react },
@@ -26,7 +29,10 @@ const TechnologiesView: React.FC = () => {
     ];
     return (
         <Technologies className="technologies">
-            <TechnologiesTitle>My HardSkills:</TechnologiesTitle>
+            {
+                // eslint-disable-next-line react/prop-types
+                <TechnologiesTitle>{props.title + ':'}</TechnologiesTitle>
+            }
             <ul>
                 {myTechnologies.map((tech, idx) => (
                     // eslint-disable-next-line react/jsx-key

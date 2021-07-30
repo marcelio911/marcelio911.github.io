@@ -4,8 +4,12 @@
 .App {
     color: #282c34;
     font-size: calc(8px + 1.2vmin);
-    background-color: rgba(255, 255, 255, 0.75);
+    
     font-family: 'Anonymous Pro', monospace;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
 }
 
 .App-logo {
@@ -22,13 +26,18 @@
     // justify-content: center;
     padding: 5vmin 2vmin;
     margin-bottom: 10vmin;
+    animation: 1s ease 0s 1 normal none running hcmFve;
 }
 
 .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 1vmin;
+    height: 9vmin;
+}
+
+.footer .technologies{
+    position: fixed;
 }
 
 @media (prefers-reduced-motion: no-preference) {

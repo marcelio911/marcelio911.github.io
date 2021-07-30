@@ -3,13 +3,21 @@ import
 from "styled-components";
 
 export const SidebarContent = styled.div`
-  margin: 30px auto;
-  position: absolute;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  margin: 1vmin;
+  padding: 5vmin 1vmin;
+
   `;
 export const Name = styled.h3`
-  margin: 30px auto;
+  margin: 0;
   `;
 
+export const Location = styled.div`
+  margin: 0;
+  text-align: center;
+`;
 export const Description = styled.p`
   margin: 30px auto;
   color: gray;  
@@ -24,7 +32,7 @@ export const HardSkills = styled.p`
   color: red;  
 `;
 
-export const Twitter = styled.div`
+export const Twitter = styled.span`
   color: green; 
 `;
 

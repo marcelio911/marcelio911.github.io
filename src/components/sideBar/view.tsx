@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ReactTransitionGroup from 'react-addons-transition-group'; // ES6
 import { Layout } from 'antd';
-import { CodeOutlined } from '@ant-design/icons';
+import { CodeOutlined, CompassOutlined } from '@ant-design/icons';
 import './sidebar.scss';
 import harmonic_player from '../../assets/images/harmonic_player.jpg';
-import { Description, Name, SoftSkills, HardSkills, Twitter, CopyRight, SidebarContent } from './styles';
+import { Description, 
+    Location, 
+    Name, 
+    SoftSkills, 
+    HardSkills, 
+    Twitter, 
+    CopyRight, 
+    SidebarContent 
+} from './styles';
 import { GithubApi } from '../../interfaces/GithubApi';
 
 interface Props {
@@ -13,7 +21,7 @@ interface Props {
 const SideBarView: React.FC<Props> = (props) => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [thumbs, setThumbs] = useState([harmonic_player]);
-    const [thumbsActive, setThumbsActive] = useState<string | undefined>(thumbs[0]);
+    const [thumbsActive, setThumbsActive] = useState<string | undefined>(thumbs[thumbs.length - 1]);
 
     const [personal, setPersonal] = useState<GithubApi | undefined>(undefined);
 
@@ -59,11 +67,15 @@ const SideBarView: React.FC<Props> = (props) => {
 
                 <Name>{personal?.name}</Name>
                 <Description className="description">{personal?.bio}</Description>
+                <CompassOutlined /> <strong>Por ordem cronológica:</strong>
+                <Location className="location">
+                    {personal?.location}
+                </Location>
                 <SoftSkills className="softSkills">{personal?.softSkills}</SoftSkills>
                 <HardSkills className="hardSkills">{personal?.hardSkills}</HardSkills>
             </SidebarContent>
             <CopyRight>
-                <CodeOutlined /> createdBy: <Twitter className="twitter">{personal?.twitter_username}</Twitter>
+                <CodeOutlined /> createdBy: <Twitter className="twitter">{personal?.login}</Twitter>
             </CopyRight>
         </Layout.Sider>
     );

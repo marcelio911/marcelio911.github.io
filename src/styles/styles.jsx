@@ -7,5 +7,6 @@ export const Nav = styled.div`
 `;
 export const InternalContent = styled.div`
   padding-bottom: 40vmin;
+  animation: 1s ease 0s 1 normal none running hcmFve;
 `;
 
