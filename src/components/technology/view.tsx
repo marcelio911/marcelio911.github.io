@@ -8,6 +8,7 @@ import springboot from '../../assets/images/technologies/springboot.png';
 import reactNative from '../../assets/images/technologies/react-native.png';
 import terraform from '../../assets/images/technologies/terraform.svg';
 import aws from '../../assets/images/technologies/aws.png';
+import firebase from '../../assets/images/technologies/firebase.png';
 import { Technologies, TechnologiesTitle } from './styles';
 
 
@@ -21,6 +22,7 @@ const TechnologiesView: React.FC = () => {
         { 'Terraform': terraform},
         { 'Mongodb': mongo},
         { 'Aws': aws},
+        { 'Firebase': firebase},
     ];
     return (
         <Technologies className="technologies">
