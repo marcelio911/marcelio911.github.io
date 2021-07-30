@@ -2,12 +2,13 @@ import
  styled
 from "styled-components";
 
-export const Name = styled.h4`
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+export const SidebarContent = styled.div`
   margin: 30px auto;
-  font-size: calc(10px +2vmin);
-  color: white;  
-`;
+  position: absolute;
+  `;
+export const Name = styled.h3`
+  margin: 30px auto;
+  `;
 
 export const Description = styled.p`
   margin: 30px auto;
@@ -23,7 +24,7 @@ export const HardSkills = styled.p`
   color: red;  
 `;
 
-export const Twitter = styled.p`
+export const Twitter = styled.div`
   color: green; 
 `;
 

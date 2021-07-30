@@ -26,9 +26,9 @@ const TechnologiesView: React.FC = () => {
         <Technologies className="technologies">
             <TechnologiesTitle>My HardSkills:</TechnologiesTitle>
             <ul>
-                {myTechnologies.map((tech) => (
+                {myTechnologies.map((tech, idx) => (
                     // eslint-disable-next-line react/jsx-key
-                    <li>
+                    <li key={"techs_" + idx}>
                         <img src={String(Object.values(tech))} alt={String(Object.keys(tech))} />
                     </li>
                 ))}

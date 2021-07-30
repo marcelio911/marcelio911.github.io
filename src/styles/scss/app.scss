@@ -2,42 +2,50 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 .App {
-  color: #282c34;
-  font-size: calc(8px + 1.2vmin);
-  background-color: rgba(255,255,255,.75);
-  font-family: 'Anonymous Pro', monospace;  
+    color: #282c34;
+    font-size: calc(8px + 1.2vmin);
+    background-color: rgba(255, 255, 255, 0.75);
+    font-family: 'Anonymous Pro', monospace;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 .App-content {
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  padding: 10vmin 2vmin;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    padding: 5vmin 2vmin;
+    margin-bottom: 10vmin;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

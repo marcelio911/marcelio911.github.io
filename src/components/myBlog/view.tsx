@@ -21,7 +21,7 @@ const MyBlogView: React.FC = () => {
         <MyBlog className="my_blog">
             {posts.map((post, idx) => (
                 // eslint-disable-next-line react/jsx-key
-                <div className={'post_' + idx}>
+                <div key={'post_' + idx} className={'post_' + idx}>
                     <h1>{post.title}</h1>
                     {htmlToReactParser.parse(post.content)}
                 </div>

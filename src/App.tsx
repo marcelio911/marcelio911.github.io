@@ -33,34 +33,25 @@ const App: React.FC = () => {
     return (
         <Layout className="App">
             <SideBarView
-                id={person?.id}
-                name={person?.name}
-                login={person?.login}
-                avatar_url={person?.avatar_url}
-                bio={person?.bio}
-                followers_url={person?.followers_url}
-                company={person?.company}
-                created_at={person?.created_at}
-                updated_at={person?.updated_at}
-                following_url={person?.following_url}
-                twitter_username={person?.twitter_username}
-                location={person?.location}
+                person={person}
             />
             <Layout.Content>
-                <Router>
+                <Router key="1">
                     <HeaderView />
                 </Router>
                 <InternalContent id="container" className="App-content">
-                    <Router>
+                    <Router key="2">
                         <Switch>
-                            <Route path="/apps" component={DrumSetView} />
-                            <Route path="/myBlog" component={MyBlogView} />
-                            <Route path="/aboutMe" component={AboutMeView} />
-                            <Route path="/" component={HomeView} />
+                            <Route key="3" path="/apps" component={DrumSetView} />
+                            <Route key="4" path="/myBlog" component={MyBlogView} />
+                            <Route key="5" path="/aboutMe" component={AboutMeView} />
+                            <Route key="6" path="/" component={HomeView} />
                         </Switch>
                     </Router>
-                    <TechnologiesView></TechnologiesView>
                 </InternalContent>
+                <Layout.Footer className="footer">
+                    <TechnologiesView></TechnologiesView>
+                </Layout.Footer>
             </Layout.Content>
         </Layout>
     );

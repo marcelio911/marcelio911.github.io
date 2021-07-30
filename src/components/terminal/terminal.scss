@@ -66,6 +66,9 @@ $terminal-bg: #2e3436;
 .terminal_line_command {
     color: #b7cdcc;
     word-wrap: break-word;
+    text-align: left;
+    left: 2vmin;
+    position: relative;
 }
 
 .terminal_cursor {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.scss';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 import { Link, withRouter } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 
@@ -26,7 +26,7 @@ const HeaderView: React.FC = withRouter((props) => {
 
     return (
         <Layout.Header>
-            <Menu className="menu">
+            <div key="menu" className="menu">
                 <Breadcrumb.Item className="menu-nav">
                     {Object.keys(menuOptions).map((item) => (
                         // eslint-disable-next-line react/jsx-key
@@ -34,7 +34,7 @@ const HeaderView: React.FC = withRouter((props) => {
                     ))}
                 </Breadcrumb.Item>
                 <Breadcrumb>{breadcrumbItems}</Breadcrumb>               
-            </Menu>
+            </div>
         </Layout.Header>
     );
 });

@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './terminal.scss';
-import { Terminal, TerminalBar, TerminalContent, PointOfCode, LineCode, Cursor, TerminalBarTitle } from './styles';
+import { Terminal, 
+    TerminalBar, 
+    TerminalContent, 
+    PointOfCode, 
+    LineCode, 
+    Cursor, 
+    TerminalBarTitle,
+    TerminalBg,
+} from './styles';
 import { useForm } from "react-hook-form";
 
 interface Props {
@@ -17,7 +25,7 @@ const TerminalView: React.FC<Props> = (props) => {
         'That\'s all folks!! 😁😁😁😁😁😁'
     ]);
     // hooks
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const [commandSamples, setCommandSamples] = useState(['Hello my friends!! ']);
     const [time, setTime] = useState(0);
     useEffect(() => {
@@ -31,7 +39,16 @@ const TerminalView: React.FC<Props> = (props) => {
     const onEntryCommand = (data: {command: string}) => {
         commandSamples.push(data.command);
         setCommandSamples(commandSamples);
-        register('');
+        reset({
+            register: "bill"
+          }, {
+            keepErrors: true, 
+            keepDirty: true,
+            keepIsSubmitted: false,
+            keepTouched: false,
+            keepIsValid: false,
+            keepSubmitCount: false,
+          });
     };
 
     const runViewCode = () => {
@@ -63,17 +80,18 @@ const TerminalView: React.FC<Props> = (props) => {
                 <div className="btn_bar btn_three"></div>
             </TerminalBar>
             <TerminalContent className="terminal_content">
+                <TerminalBg></TerminalBg>
                 {commandSamples.map((textCodeSample, idx) => (
                     // eslint-disable-next-line react/jsx-key
-                    <div>
+                    <div key={"commandSamples_" + idx}>
                         <PointOfCode className="terminal_point_of_command">{textPointOfCode}</PointOfCode>
                         <LineCode className="terminal_line_command line-1 anim-typewriter">{textCodeSample}</LineCode>
-                        <div className="break"></div>
+                        <div key={"break_" + idx} className="break"></div>
                         {idx === commandSamples.length - 1 && (
-                            <div>
+                             <div key={"lastLine_" + idx}>
                                 <PointOfCode className="terminal_point_of_command">{textPointOfCode}</PointOfCode>
                                 <LineCode className="terminal_line_command line-1">
-                                    <form onSubmit={handleSubmit(onEntryCommand)}>
+                                    <form onSubmit={handleSubmit(onEntryCommand)} key={"enter_command" + idx}>
                                         <input {...register("command", { required: true })} />
                                         <input type="submit" className="hidden" />
                                     </form>
