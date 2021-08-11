@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SideBarView from './components/sideBar/view';
 import HeaderView from './components/header/view';
-import { Layout } from 'antd';
 import './styles/scss/app.scss';
-import { InternalContent,  } from './styles/styles';
+import { InternalContent, UmaQualquer, OutraQualquer, AppMenu } from './styles/styles';
 import MyGitHubProfileApi from './services/MyGitHubProfileApi';
 import { GithubApi } from './interfaces/GithubApi';
 import { HashRouter as Router } from 'react-router-dom';
@@ -30,26 +29,28 @@ const App: React.FC = () => {
     }, []);
 
     return (
-        <Layout className="App">
-            <SideBarView
-                person={person}
-            />
-            <Layout.Content>
-                <Router key="1">
-                    <HeaderView />
-                </Router>
-                <InternalContent id="container" className="App-content">
-                    <Router key="2">
-                        <Switch>
-                            <Route path="/apps" component={DrumSetView} />
-                            <Route path="/myBlog" component={MyBlogView} />
-                            <Route path="/aboutMe" component={AboutMeView} />
-                            <Route path="/" component={HomeView} />
-                        </Switch>
+        <div className="App">
+            <UmaQualquer>
+                <AppMenu className="App_menu">
+                    <Router key="1">
+                        <HeaderView />
                     </Router>
-                </InternalContent>
-            </Layout.Content>
-        </Layout>
+                </AppMenu>
+                <OutraQualquer>
+                    <SideBarView person={person} />
+                    <InternalContent id="container" className="App-content">
+                        <Router key="2">
+                            <Switch>
+                                <Route key="3" path="/apps" component={DrumSetView} />
+                                <Route key="4" path="/myBlog" component={MyBlogView} />
+                                <Route key="5" path="/aboutMe" component={AboutMeView} />
+                                <Route key="6" path="/" component={HomeView} />
+                            </Switch>
+                        </Router>
+                    </InternalContent>
+                </OutraQualquer>
+            </UmaQualquer>
+        </div>
     );
 };
 

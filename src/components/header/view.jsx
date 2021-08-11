@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.scss';
-import { Layout } from 'antd';
+import { Layout, } from 'antd';
 import { Link, withRouter } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 

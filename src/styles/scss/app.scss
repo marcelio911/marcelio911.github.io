@@ -1,15 +1,25 @@
 @import '~antd/dist/antd.css';
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 .App {
     color: #282c34;
     font-size: calc(8px + 1.2vmin);
-    
+    background: #f0f2f5;
     font-family: 'Anonymous Pro', monospace;
+    display: block;
+}
+
+.App-menu {
     display: flex;
-    flex-wrap: wrap;
     -webkit-box-pack: center;
     justify-content: center;
+    width: 100%;
 }
 
 .App-logo {
@@ -18,17 +28,12 @@
 }
 
 .App-content {
-    text-align: center;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-    padding: 5vmin 2vmin;
-    margin-bottom: 10vmin;
+    width: 75%;
+    max-width: 80%;
     animation: 1s ease 0s 1 normal none running hcmFve;
 }
-
 .footer {
     position: fixed;
     bottom: 0;

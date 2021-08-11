@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback} from 'react';
 import './terminal.scss';
 import { Terminal, 
     TerminalBar, 
@@ -10,20 +10,15 @@ import { Terminal,
     TerminalBg,
 } from './styles';
 import { useForm } from "react-hook-form";
-
+import { allData } from "./commandos.js";
+import useKeyboardShortcut from 'use-keyboard-shortcut';
 interface Props {
     username?: string;
 }
 
 const TerminalView: React.FC<Props> = (props) => {
     const [textPointOfCode, setTextPointOfCode] = useState('marcelio@ubuntu:~$');
-    const [allDataCommands, setAllDataCommands] = useState([
-        'This is my personal webpage...',
-        'Sorry 😕 I\'m still working on it!' ,
-        'But it will here that you\'ll find my currents studies',
-        'I\'ll posts here everything about my personal interests',        
-        'That\'s all folks!! 😁😁😁😁😁😁'
-    ]);
+    const [allDataCommands, setAllDataCommands] = useState(allData);
     // hooks
     const { register, handleSubmit, reset } = useForm();
     const [commandSamples, setCommandSamples] = useState(['Hello my friends!! ']);
@@ -71,6 +66,15 @@ const TerminalView: React.FC<Props> = (props) => {
         setTextPointOfCode(JSON.parse(JSON.stringify(props?.username)) + ':~$');
     }, [props])
 
+    const keys = 
+        ["ctrl", "c"];
+        
+    const handleKeyboardShortcut = useCallback(keys => {        
+        setCommandSamples(['Hello my friends!! ']);
+    }, [commandSamples]);
+
+    useKeyboardShortcut(keys, handleKeyboardShortcut);
+
     return (
         <Terminal className="terminal">
             <TerminalBar className="terminal_bar">
@@ -92,10 +96,10 @@ const TerminalView: React.FC<Props> = (props) => {
                                 <PointOfCode className="terminal_point_of_command">{textPointOfCode}</PointOfCode>
                                 <LineCode className="terminal_line_command line-1">
                                     <form onSubmit={handleSubmit(onEntryCommand)} key={"enter_command" + idx}>
-                                        <input {...register("command", { required: true })} />
+                                        <Cursor className="terminal_cursor"></Cursor>
+                                        <input autoComplete="false" {...register("command", { required: true })} />
                                         <input type="submit" className="hidden" />
                                     </form>
-                                    <Cursor></Cursor>
                                 </LineCode>
                             </div>
                         )}

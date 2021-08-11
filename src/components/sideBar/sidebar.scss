@@ -1,14 +1,10 @@
 .sidebar {
+    background-color: hsla(0,0%,100%,.75) !important;
     display: flex;
     flex-direction: column;
+    max-width: 25%;
     margin-right: auto;
-    background-color: hsla(0,0%,100%,.75) !important;
-    flex: none !important;
-    max-width: 360px !important;
-    min-width: 360px !important;
-    flex-direction: column;
-    position: sticky !important;
-    animation: 1s ease 0s 1 normal none running hcmFve;
+    
 }
 .animated-list {
     list-style: none;
@@ -17,12 +13,16 @@
 .sidebar p {
     word-break: break-all;
 }
+.sidebar strong {
+    font-weight: bold;
+}
 
 .sidebar .description {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
-    text-align: justify;
     margin-bottom: 20px;
+    text-align: justify;
+    
 }
 .Sidebar-profile {
     height: 17vmin;

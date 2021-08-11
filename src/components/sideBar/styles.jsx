@@ -2,14 +2,20 @@ import
  styled
 from "styled-components";
 
+export const Sidebar = styled.div`
+  margin: 0;
+  `;
+
 export const SidebarContent = styled.div`
-  position: sticky;
   display: flex;
   flex-direction: column;
-  margin: 1vmin;
-  padding: 5vmin 1vmin;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 20px;
+  position: sticky;
+  top: 20px;
+`;
 
-  `;
 export const Name = styled.h3`
   margin: 0;
   `;

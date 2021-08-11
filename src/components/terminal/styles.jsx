@@ -13,7 +13,7 @@ export const TerminalBg = styled.div`
   z-index: 0;
   left: 0;
   right: 0;  
-  opacity: .1;
+  opacity: .05;
   width: 100%;
   height: 100%;
   top: 0;

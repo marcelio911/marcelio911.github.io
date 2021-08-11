@@ -36,7 +36,9 @@ const HomeView: React.FC = () => {
             </HomeTitle>
            {person?.blog && <TerminalView username={String(person?.blog).split('https://')[1]}></TerminalView>}
 
-           PS.: Estou usando uma API aberta do github para fornecer os dados desta página, se alguém tiver interessado em customizar seu perfil github.io também baixa o projeto e muda o nome do `username` na chamada da API e vua-lá.
+           PS.: Estou usando uma API aberta do github para fornecer os dados desta página, 
+           caso você desejar customizar seu perfil github.io, aproveita e faz um fork/clone deste projeto 
+           muda o meu `username` configurado no App.tsx na chamada da API e vua-lá.
            <Layout.Footer className="footer">
                 <TechnologiesView title="@skills"></TechnologiesView>
                 <LinuxForever>

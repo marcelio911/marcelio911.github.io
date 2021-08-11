@@ -52,6 +52,7 @@ $terminal-bg: #2e3436;
     padding: 0.8rem 1.25rem !important;
     height: 40vmin;
     overflow-y: scroll;
+    font-size: 14px;
 }
 
 .terminal_point_of_command {
@@ -78,7 +79,7 @@ $terminal-bg: #2e3436;
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0.15em; /* Adjust as needed */
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
@@ -112,8 +113,16 @@ p.line-1 {
 }
 
 /* Animation */
-p.anim-typewriter {
-    animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+.anim-typewriter {
+    // animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    // border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typewriter 3.5s steps(40, end),
+    blinkTextCursor .75s step-end infinite;
 }
 @keyframes typewriter {
     from {

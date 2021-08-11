@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ReactTransitionGroup from 'react-addons-transition-group'; // ES6
-import { Layout } from 'antd';
 import { CodeOutlined, CompassOutlined } from '@ant-design/icons';
 import './sidebar.scss';
 import harmonic_player from '../../assets/images/harmonic_player.jpg';
-import { Description, 
+import { 
+    Sidebar,
+    Description, 
     Location, 
     Name, 
     SoftSkills, 
@@ -51,15 +52,13 @@ const SideBarView: React.FC<Props> = (props) => {
             const randomProfile = thumbs[randomIndex - 1] || thumbs[0];
 
             if (randomProfile !== undefined) {
-                console.log('randomProfile::typeof ', typeof randomProfile);
-                console.log('randomProfile:: ', randomProfile);
                 setThumbsActive(randomProfile);
             }
         }, 10000); // the each ten seconds
     }, []);
 
     return (
-        <Layout.Sider className="sidebar">
+        <Sidebar className="sidebar">
             <SidebarContent>
                 <ReactTransitionGroup component="ul" className="animated-list">
                     {myThumbsProfiles}
@@ -67,7 +66,7 @@ const SideBarView: React.FC<Props> = (props) => {
 
                 <Name>{personal?.name}</Name>
                 <Description className="description">{personal?.bio}</Description>
-                <CompassOutlined /> <strong>Por ordem cronológica:</strong>
+                <CompassOutlined /> <span className="strong">Rodando o Brasil:</span>
                 <Location className="location">
                     {personal?.location}
                 </Location>
@@ -77,7 +76,7 @@ const SideBarView: React.FC<Props> = (props) => {
             <CopyRight>
                 <CodeOutlined /> createdBy: <Twitter className="twitter">{personal?.login}</Twitter>
             </CopyRight>
-        </Layout.Sider>
+        </Sidebar>
     );
 };
 
